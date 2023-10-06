@@ -1,6 +1,14 @@
+
 .Upload {
-  text-align: center;
+  background-color: #E7D5EF;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: -apple-system, BlinkMacSystemFont,'Roboto',
 }
+
 
 .Upload-logo {
   height: 40vmin;
@@ -12,6 +20,7 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+
 
 .Upload-header {
   background-color: #282c34;
@@ -36,3 +45,5 @@
     transform: rotate(360deg);
   }
 }
+
+
