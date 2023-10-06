@@ -8,7 +8,6 @@ function Main() {
         <img src= 'sheCodes_logo.png' className="Main-logo" alt="logo" />
         <p>MAIN PAGE</p>
       </header>
-      
     </div>
   );
 }
