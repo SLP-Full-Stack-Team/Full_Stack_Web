@@ -5,7 +5,7 @@ __Team Members__: Christy Xiong, Chia Yuan Wu, Tam Dinh, Payton Beitler
 
 __Project Description__: 
 
-__Tech Stack__: ReactJS
+__Tech Stack__: ReactJS, JavaScript, HTML, CSS
 
 __Demo__:
 
