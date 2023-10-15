@@ -45,5 +45,30 @@
     transform: rotate(360deg);
   }
 }
+/*This is the drop down menu*/
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  outline: none; /* Remove default focus outline */
+}
+
+select:focus {
+  border-color: #007bff; /* Change border color when focused */
+}
+
+
+
+select option[selected] {
+  color: #999;
+}
 
 
