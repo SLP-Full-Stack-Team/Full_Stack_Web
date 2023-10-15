@@ -53,21 +53,32 @@ label {
 }
 
 select {
-  width: 100%;
+  width: 1000px;
+  height: 90px;
   padding: 8px;
+  position: absolute; /* Set the position to absolute */
+  top:20%;
+  left:20%;
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 16px;
   outline: none; /* Remove default focus outline */
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #BCD1DB;
+  font-size: 50px; /* Set font size to 70 */
+  font-weight: 800; /* Set font weight to extra bold */
+  font-family: 'Roboto', sans-serif; /* Specify the font family */
 }
 
 select:focus {
   border-color: #007bff; /* Change border color when focused */
 }
 
-
-select option[disabled] {
-  color: #999;
+select option:hover {
+    color: rgba(0, 0, 0, 0.7);
+    background-color: #BCD1DB;
 }
+
+
 
 
