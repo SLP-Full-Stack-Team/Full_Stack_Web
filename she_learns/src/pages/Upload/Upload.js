@@ -7,7 +7,7 @@ function Upload() {
     {label:'Sorted_Array_02', value:'Sorted Array'},
     {label:'Binary_Tree', value:'Binary Tree'}
     ];
-    const [value, setValue] = React.useState('Select a game');
+    const [value, setValue] = React.useState('');
     const handleChange = (event) => {
         setValue(event.target.value);
     }

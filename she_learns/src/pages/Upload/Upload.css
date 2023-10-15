@@ -66,8 +66,7 @@ select:focus {
 }
 
 
-
-select option[selected] {
+select option[disabled] {
   color: #999;
 }
 
