@@ -3,9 +3,9 @@ import * as React from 'react';
 
 function Upload() {
     const topic = [
-    {label:'Sorted_Array_01', value:'Sorted Array1'},
-    {label:'Sorted_Array_02', value:'Sorted Array'},
-    {label:'Binary_Tree', value:'Binary Tree'}
+    {label:'Sorted Array 01', value:'Sorted Array1'},
+    {label:'Sorted Array 02', value:'Sorted Array'},
+    {label:'Binary Tree', value:'Binary Tree'}
     ];
     const [value, setValue] = React.useState('');
     const handleChange = (event) => {

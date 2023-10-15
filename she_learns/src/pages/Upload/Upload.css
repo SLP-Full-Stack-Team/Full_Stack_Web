@@ -74,8 +74,8 @@ select:focus {
   border-color: #007bff; /* Change border color when focused */
 }
 
-select option:hover {
-    color: rgba(0, 0, 0, 0.7);
+select:hover option:hover {
+    color: #000000;
     background-color: #BCD1DB;
 }
 
