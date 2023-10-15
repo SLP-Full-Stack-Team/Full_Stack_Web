@@ -2,7 +2,16 @@ import './Upload.css';
 import * as React from 'react';
 
 function Upload() {
-    const [topic, setTopic] = React.useState('Sorted Array1');
+    const topics = [
+    {label:'Sorted_Array_01', value:'Sorted Array1'},
+    {label:'Sorted_Array_02', value:'Sorted Array'},
+    {label:'Binary_Tree', value:'Binary Tree'}
+    ];
+    const [value, setValue] = React.useState('Sorted Array1');
+    const handleChange = (event) => {
+        setValue(event.target.value);
+    }
+
   return (
     <div className="Upload">
       <header>
@@ -20,11 +29,9 @@ function Upload() {
             <div>
                 <Dropdown
                 label="Question Topic"
-                Options={[{label:'Sorted_Array_01', value:'Sorted Array1'},
-                {label:'Sorted_Array_02', value:'Sorted Array'},
-                {label:'Binary_Tree', value:'Binary Tree'}
-                ]}
-                value={topic}
+                Options={topics}
+                value={value}
+                onChange={handleChange}
                 />
 
             </div>
@@ -33,15 +40,14 @@ function Upload() {
     </div>
   );
 }
-const Dropdown = ({ label, value, options, onChange }) => {
-
+const Dropdown = ({ label, value, topic, onChange}) => {
  return (
 
    <label>
      {label}
      <select value={value} onChange={onChange}>
-       {options.map((option) => (
-         <option value={option.value}>{option.label}</option>
+       {topic.map((topic) => (
+         <option value={topic.value}>{topic.label}</option>
        ))}
      </select>
    </label>
