@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import './Main.css';
 import { FabComponent } from '@syncfusion/ej2-react-buttons';
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
@@ -14,11 +15,11 @@ function Main() {
           <Link to='/upload' className='link-upload'><button>Upload</button></Link>
           <Route path='/upload' element={<Upload />} />
         </Router> */}
-        {/* <button>Upload</button> */}
-
+        <button>Upload</button>
       </body>
     </div>
   );
 }
+
 
 export default Main;
