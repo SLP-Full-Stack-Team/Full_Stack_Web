@@ -1,22 +1,38 @@
+import React, { useState } from 'react';
 import './Main.css';
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Upload from '../User/User'
 
 
 function Main() {
-  return (
-    <div className="Main">
-      <body className="Main-body">
-        <img src= 'sheCodes_logo.png' className="Main-logo" alt="logo" />
-        <p>MAIN PAGE</p>
-        {/* <Router>
-          <Link to='/upload' className='link-upload'><button>Upload</button></Link>
-          <Route path='/upload' element={<Upload />} />
-        </Router> */}
-        <button>Upload</button>
-      </body>
-    </div>
-  );
+ const [isQuestionClicked, setIsQuestionClicked] = useState(false);
+ const [isAnswerClicked, setIsAnswerClicked] = useState(false);
+
+
+ const handleQuestionClick = () => {
+   setIsQuestionClicked(true);
+ };
+
+
+ const handleAnswerClick = () => {
+   setIsAnswerClicked(true);
+ };
+
+
+ return (
+   <div className="Main">
+     <body className="Main-body" contentEditable="true">
+       <form className="form-questions" contentEditable="true" onClick={handleQuestionClick}>
+         <label style={{ display: isQuestionClicked ? 'none' : 'block' }}>Question</label>
+       </form>
+       <form className="form-answers" contentEditable="true" onClick={handleAnswerClick}>
+         <label style={{ display: isAnswerClicked ? 'none' : 'block' }}>Answers</label>
+       </form>
+       <button type="submit" className="submit-buttonM"></button>
+     </body>
+   </div>
+ );
 }
+
 
 export default Main;
