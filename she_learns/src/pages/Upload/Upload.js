@@ -1,25 +1,53 @@
 import './Upload.css';
+import * as React from 'react';
 
 function Upload() {
+    const topic = [
+    {label:'Sorted Array 01', value:'Sorted Array1'},
+    {label:'Sorted Array 02', value:'Sorted Array'},
+    {label:'Binary Tree', value:'Binary Tree'}
+    ];
+    const [value, setValue] = React.useState('');
+    const handleChange = (event) => {
+        setValue(event.target.value);
+    }
+
   return (
     <div className="Upload">
-      <header className="Upload-header">
-        <img src= 'sheCodes_logo.png' className="Upload-logo" alt="logo" />
-        <p>Upload Page</p>
-        <p>
-          Edit <code>src/UploadPage/Upload.js</code> and save to reload.
-        </p>
-        <a
-          className="Upload-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header>
+        <body>
+            <div>
+                <Dropdown
+                label="Question Topic"
+                options={topic}
+                value={value}
+                placeholder="Select a game"
+                onChange={handleChange}
+                />
+
+            </div>
+        </body>
       </header>
     </div>
   );
 }
+const Dropdown = ({label, value, options, placeholder, onChange}) => {
+ return (
 
+   <label>
+     {label}
+     <select value={value} onChange={onChange}>
+     {placeholder && (
+               <option value="" disabled selected>
+                 {placeholder}
+               </option>
+      )}
+       {options.map((option) => (
+         <option value={option.value}>{option.label}</option>
+       ))}
+     </select>
+   </label>
+ );
+
+};
 export default Upload;
