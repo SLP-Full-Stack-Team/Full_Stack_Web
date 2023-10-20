@@ -37,7 +37,7 @@
  .form-answers {
   display: flex;
   flex-direction: column;
-  margin-top: 20px; /* Adjust the margin-top value to increase the space */
+  margin-top: 20px; 
   text-align: left;
   font-size: 30px;
   font-weight: 800;
