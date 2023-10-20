@@ -22,10 +22,10 @@
   flex-direction: column;
   margin-bottom: 50px;
   text-align: left;
-  font-size: 60px;
+  font-size: 30px;
   font-weight: 800;
   font-family: 'Roboto', sans-serif;
-  width: 1350px;
+  width: 1200px;
   height: 78px;
   background-color: #6C5B5B;
   border-radius: 20px;
@@ -39,10 +39,10 @@
   flex-direction: column;
   margin-top: 20px; /* Adjust the margin-top value to increase the space */
   text-align: left;
-  font-size: 60px;
+  font-size: 30px;
   font-weight: 800;
  font-family: 'Roboto', sans-serif;
- width: 1350px;
+ width: 1200px;
  height: 300px;
  left: 81px;
  background-color: #6C5B5B;
@@ -53,16 +53,19 @@
 
 
 .submit-buttonM {
- position: absolute;
- left: 1325px;
- top: 750px;
- width: 116px;
- height: 107px;
- background-image: url('BsPlusCircle.png');
- background-size: contain;
- background-color: transparent;
- border: none;
- cursor: pointer;
-}
+  position: absolute;
+  left: 1325px;
+  top: 750px;
+  width: 116px;
+  height: 107px;
+  background-image: url('BsPlusCircle.png');
+  background-size: contain;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transform: scale(0.5); /* Adjusted scale */
+  transform-origin: top left; /* Keep the origin at the top left */
+ }
+ 
 
  
