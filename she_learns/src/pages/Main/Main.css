@@ -63,8 +63,8 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
-  transform: scale(0.5); /* Adjusted scale */
-  transform-origin: top left; /* Keep the origin at the top left */
+  transform: scale(0.5); 
+  transform-origin: top left; 
  }
  
 
