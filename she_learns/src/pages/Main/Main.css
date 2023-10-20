@@ -2,9 +2,6 @@
   text-align: center;
  }
  
- 
- 
- 
  .Main-body {
   background-color: #E7D5EF;
   min-height: 100vh;
@@ -15,7 +12,6 @@
   font-size: calc(10px + 2vmin);
   color: #282c34;
  }
- 
  
  .form-questions {
   display: flex;
@@ -50,7 +46,6 @@
  padding: 10px;
  color: #BCD1DB;
 }
-
 
 .submit-buttonM {
  position: absolute;

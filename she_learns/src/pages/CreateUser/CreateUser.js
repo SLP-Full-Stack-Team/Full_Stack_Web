@@ -1,8 +1,6 @@
 import '../CreateUser/CreateUser.css';
 import { useState } from 'react';
 
-
-
 function CreateUser() {
   const [inputs, setInputs] = useState({});
   return (
