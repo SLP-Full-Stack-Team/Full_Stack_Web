@@ -79,6 +79,41 @@ select:hover option:hover {
     background-color: #BCD1DB;
 }
 
+/*This is the radio buttons*/
 
+.custom-dropdown input[type="radio"]:checked:after {
+  background-color: #BCD1DB; /* Change the background color */
+  border-color: #000000; /* Change the border color */
+}
+.custom-dropdown input[type="radio"] {
+ transform: scale(1.5); /* Adjust the scale factor as needed */
 
+}
+.custom-dropdown label{
+    margin: 40px; /* Add some spacing between the radio buttons */
+}
 
+.custom-dropdown{
+    position: absolute; /* Set the position to absolute */
+    top:40%;
+    left:30%;
+    display: flex; /* Display labels as inline-block elements */
+    font-size: 30px; /* Set font size to 70 */
+    font-weight: 800; /* Set font weight to extra bold */
+    font-family: 'Roboto', sans-serif; /* Specify the font family */
+}
+
+/*rect-btn*/
+.rect-btn {
+    position: absolute; /* Set the position to absolute */
+    top:80%;
+    right:20%;
+    font-weight: 100; /* Set font weight to extra bold */
+    font-family: 'Roboto', sans-serif; /* Specify the font family */
+    border-radius: 20px; /* Set border radius for rounded corners */
+    font-size: 30px; /* Set font size */
+    padding: 10px 50px; /* Adjust padding to change button size */
+    background-color: #000000; /* Change the background color */
+    color:#BCD1DB;
+    border-color: #E7D5EF; /* Change the border color */
+}
