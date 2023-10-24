@@ -8,21 +8,24 @@ function SignIn() {
     <div className="SignIn">
       <body className="SignIn-body">
         <h2>Sign In</h2>
-        <form className="form-input">
+        <form className="si-form-input">
           <label>Username</label>
           <input 
-            className="input-box" 
+            className="si-input-box" 
             type="text"></input>
         </form>
-        <form className="form-input">
+        <form className="si-form-input">
           <label>Password</label>
           <input 
-            className="input-box" 
+            className="si-input-box" 
             type="text"></input>
         </form>
-        <button type="submit" className="submit-button">Sign In</button>
-        <p>Not a user?</p>
-        <Link to ='/signup'>Create an Account</Link>
+        <button type="submit" className="si-submit-button">Sign In</button>
+        <div className="si-not-user-link">
+          <p>Not a user?</p>
+          <Link to ='/signup'>Create an Account</Link>
+        </div>
+        
         
       </body>
     </div>

@@ -1,8 +1,23 @@
 .App {
   text-align: center;
 }
-nav{
-    padding: 1rem;
+
+body{
+  background-color: #E7D5EF;
+}
+
+/* nav bar */
+.nav-container{
+    min-height: 10vh;
+    padding: 20px;
+    margin: 0px 30px;
+    display: flex;
+    justify-content: space-between;
+    vertical-align: middle;
+}
+
+.nav-right{
+  margin-top: 8px;
 }
 
 .nav-link-main{
@@ -14,68 +29,41 @@ nav{
     font-weight: bolder;
     color: #282c34;
     vertical-align: middle;
-    /* display: inline-block; */
-}
-
-.nav-link-signin, .nav-link-signup, .nav-link-user, .nav-link-upload{
-    text-decoration: none;
-    font-size: 18px;
-    padding:0.5rem 1rem;
-    font-family: -apple-system, BlinkMacSystemFont,'Roboto',
-    sans-serif;
-    color: #282c34;
-    vertical-align: middle;
-    display: -webkit-inline-flex;
-    /* justify-content: flex-end; */
-}
-
-.nav-link-signup{
-  border: 1px solid #282c34;
-  border-radius: 0.5rem;
-  background-color: #282c34;
-  color: white;
 }
 
 .nav-logo{
-    /* padding: 1rem; */
     padding-right: 0.5rem;
     height: 5vmin;
     pointer-events: visible;
-    vertical-align: middle;
-
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #E7D5EF;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/* main page */
+.main-container{
+  background-color: white;
+  border-radius: 20px;
+  padding: 10px 150px;
+  margin:30px 50px;
+  /* height:100vh; */
+  display: grid;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+ 
 }
 
-.App-link {
-  color: #61dafb;
+/* input upload */
+.upload-btn{
+  font-size: 1.4rem;
+  border: 1px solid;
+  border-radius: 35px;
+  /* flex-grow: 1; */
+  padding-left: 1.6rem;
+  width: 500px;
+  justify-content: left;
+  display: flex;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.upload-media{
+  display: flex;
+  gap: 5px;
+  margin-top: 10px;
 }
+
