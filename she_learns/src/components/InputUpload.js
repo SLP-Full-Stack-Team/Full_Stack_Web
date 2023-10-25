@@ -1,5 +1,4 @@
 import React, { Fragment , useState} from "react";
-import Main from "../pages/Main";
 
 const InputUpload = () => {
     const [upload_title, setTitle] = useState("");
@@ -23,10 +22,13 @@ const InputUpload = () => {
 
     return (
         <Fragment>
-            <h1 className = 'text-center mt-5' > Input Upload </h1>
+            <h1 className = 'text-center mt-5' > Welcome to sheLearns! </h1>
             <button className="upload-btn"
                     data-bs-toggle='modal'
-                    data-bs-target='#myModal'>Start a Upload</button>
+                    data-bs-target='#myModal'>
+                        Start a Upload
+            </button>
+
             <div className='modal fade' id='myModal'>
                 <div className='modal-dialog'>
                     <div className='modal-content'>
@@ -55,7 +57,6 @@ const InputUpload = () => {
                             </form>   
                         </div>
                         <div className='modal-footer'>
-                            <button type='button' className='btn btn-danger' data-bs-dismiss='modal'>Close</button>
                             <button type='button' className='btn btn-success' data-bs-dismiss='modal' onClick = {e => onSubmitForm(e)}>Upload</button>
                         </div>
                     </div>

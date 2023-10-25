@@ -35,23 +35,29 @@ const EditUpload = ({upload}) => {
                 <div className="modal-dialog">
                     <div className="modal-content">
                         <div className="modal-header">
-                            <h5 className="modal-title" id="exampleModalLabel">Modal title</h5>
-                            <button type="button" className="btn-close" data-bs-dismiss="modal">
-                                &times;
-                            </button>
+                            <h5 className="modal-title" id="exampleModalLabel">Edit Solution Upload</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div className="modal-body">
-                            <input type="text" 
-                                   className="form-control"
-                                   value={upload_title}
-                                   onChange={e => setTitle(e.target.value)}/> 
-                            <input type="text" 
-                                   className="form-control"
-                                   value={upload_description}
-                                   onChange={e => setDescription(e.target.value)}/> 
+                            <form>
+                                <div className="form-group">
+                                    <label className="col-form-label" >Title:</label>
+                                    <input type="text" className="form-control" value={upload_title}
+                                        onChange={e => setTitle(e.target.value)}/>
+                                </div>
+                                <div className="form-group">
+                                    <label className="col-form-label">Description:</label>
+                                    <textarea className="form-control" value={upload_description}
+                                        onChange={e => setDescription(e.target.value)}></textarea>
+                                </div>
+                                <div className="upload-media">
+                                    <button className="btn btn-dark">Img</button>
+                                    <button className="btn btn-dark">Video</button>
+                                    <button className="btn btn-dark">Text/Doc</button>
+                                </div>
+                            </form>   
                         </div>
                         <div className="modal-footer">
-                            <button type="button" className="btn btn-danger" data-bs-dismiss="modal">Close</button>
                             <button type="button" className="btn btn-warning" data-bs-dismiss="modal" onClick = {e => updateDescription(e)}>Save Edit</button>
                         </div>
                     </div>

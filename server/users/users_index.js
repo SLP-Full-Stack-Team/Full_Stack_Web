@@ -13,6 +13,10 @@ app.use(express.json()); //req body
 // CREATE A USER
 // look at app_index.js for reference
 
+
+// GET A UPLOAD
+// this is will be used to show case user info on User page
+
 // DELETE USER
 
 app.listen(5001, () => {

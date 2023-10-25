@@ -67,3 +67,7 @@ body{
   margin-top: 10px;
 }
 
+.col-form-label{
+  display: flex;
+  justify-content: left;
+}
