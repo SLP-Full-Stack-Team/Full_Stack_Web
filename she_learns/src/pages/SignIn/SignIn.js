@@ -20,7 +20,9 @@ function SignIn() {
             className="si-input-box" 
             type="text"></input>
         </form>
-        <button type="submit" className="si-submit-button">Sign In</button>
+     
+        <Link to='/main' className='btn si-submit-button '>Sign In</Link>
+       
         <div className="si-not-user-link">
           <p>Not a user?</p>
           <Link to ='/signup'>Create an Account</Link>

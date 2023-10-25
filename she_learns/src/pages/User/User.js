@@ -1,40 +1,27 @@
 import './User.css';
 import userPic from './images/profile-user.png'
+import { Link } from 'react-router-dom';
 
 function User() {
   return (
-    <div className="User">
-      <header className="User-header">
-        <div className="User-profile">
-          <div className = "User-container">
-            <div className = "User-items">
-              <div className = "User-info">
-                <div className = "User-pic">
-                  <img className="picture" src={userPic} alt = "user profile picture"  />
-                </div>
-                <div className = "User-bio">
-                  <body className = "User-bio-item" id = "User-name" >Jane Cooper</body>
-                  <body className = "User-bio-item"  id = "User-detail" >jane123</body>
-                  <body className = "User-bio-item"  id = "User-detail" >jane123@gmail.com</body>
-                </div>
-              </div>
-            </div>
-            <div className = "User-items" id = 'User-upload-area'>
-              <div className="User-upload-header">
-                <div className = "User-upload-title">Upload History</div>
-                <div className = "User-upload-btn-area">
-                  <button className = "User-upload-btn">UPLOAD</button>
-                </div>
-              </div>
-              <div className="User-uploads">
-                <div className = "User-uploads-details">
-                No Uploads Yet...
-                </div>
-              </div>
-            </div>
-          </div>
+    <div className="User-container">
+      <div className = "User-info">
+        <img className="User-picture" src={userPic} alt = "user profile picture"  />
+        <ul className = "User-bio">
+          <li className = "User-name" >Jane Cooper</li>
+          <li className = "User-detail">User Name: jane123</li>
+          <li className = "User-detail">Email: jane123@gmail.com</li>
+        </ul>
+      </div>
+      <div className = "User-upload-area">
+        <div className = "User-upload-header">
+          <h2 className='User-upload-h2'>Upload History</h2>
+          <Link to='/main' className='btn User-upload-btn'>Upload</Link>
         </div>
-      </header>
+        <div className="User-upload-history">
+          <p>No Uploads Yet...</p>
+        </div>
+      </div>
     </div>
   );
 }
