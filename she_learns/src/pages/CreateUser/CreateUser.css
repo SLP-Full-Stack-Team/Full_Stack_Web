@@ -49,8 +49,8 @@
     padding:10px 30px;
     font-size: 18px;
     font-weight: 400;
-    display: flex;
-    margin-left: auto;
+    align-items: center;
+    margin: auto;
     margin-top: 40px;
   }
   

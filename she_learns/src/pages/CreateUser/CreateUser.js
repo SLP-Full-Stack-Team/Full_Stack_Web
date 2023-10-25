@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './CreateUser.css';
+import { Link } from 'react-router-dom';
 
 function CreateUser() {
   const [inputs, setInputs] = useState({});
@@ -42,7 +43,8 @@ function CreateUser() {
             type="text" 
             />
         </form>
-        <button type="submit" className="cu-submit-button">Create Account</button>
+        <Link to='/main' className='btn cu-submit-button '>Create Account</Link>
+        {/* <button type="submit" className="cu-submit-button">Create Account</button> */}
       </body>
     </div>
   );

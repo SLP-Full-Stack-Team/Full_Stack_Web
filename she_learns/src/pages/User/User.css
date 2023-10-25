@@ -1,34 +1,9 @@
-.User {
-  text-align: center;
-}
-
-.User-header {
-  background-color: #E7D5EF;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-
-.User-profile{
-  background-color: white;
-  width: 95%;
-  height: 90vh;
-  display: flex;
-  flex-direction: column;
-  place-items: center;
-  border-radius: 5px;
-  color: black;
-  
-}
-
 .User-container{
-  width: 90%;
-  height: 100%;
+  background-color: white;
+  border-radius: 20px;
+  padding: 10px 100px;
+  margin: 30px 50px;
+  height:100vh;
   display: flex;
   flex-direction: column;
 }
@@ -40,69 +15,9 @@
   margin-bottom: 20px;
 }
 
-.User-items{
-}
-#User-upload-area{
- height: 80%;
- min-width: 20vh;
-}
-.User-uploads{
-  border: 1px solid #D9D9D9;
-  border-radius: 5px;
-  display: grid;
-  place-items: center;
-  height: 80%;
-  max-width: 100%;
-}
-
-@media (max-width: 768px) {
-  .User-uploads {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
-.User-uploads-details{
-  color: #808080;
-}
-.User-upload-btn{
-  height: 30px;
-  width: 100px;
-  background-color: #73a0b4;
-  border: none;
-  color: white;
-  border-radius: 5px;
-  font-weight: bold;
-  cursor: pointer;
-}
-.User-upload-btn:active{
-  background-color: #87adbf;
-}
-.User-upload-btn-area{
-  display: flex;
-  align-items: center;
-}
-.User-upload-header{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 20px;
-}
-@media (max-width: 768px) {
-  .User-upload-header {
-    display: flex; /* Stacks items vertically on smaller screens */
-    align-items: center; /* Center items horizontally and vertically on smaller screens */
-
-  }
-}
-.picture{
+.User-picture{
   width: 100px;
   margin: 20px 20px 20px 0px;
-}
-
-.User-logo {
-  height: 40vmin;
-  pointer-events: none;
 }
 
 .User-bio{
@@ -110,39 +25,79 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  list-style: none;
 }
 
-.User-bio-item{
-
-}
-
-#User-name{
+.User-name{
   font-weight: bold;
 }
 
-#User-detail{
+.User-detail{
   font-size: small;
   color: #808080;
 }
 
-.User-upload-title{
+.User-upload-area{
+ height: 80%;
+ min-width: 20vh;
+}
+
+.User-upload-header{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+  justify-content: space-between;
+}
+
+.User-upload-h2{
   font-weight: bold;
-  text-align: left;
 }
-@media (prefers-reduced-motion: no-preference) {
-  .User-logo {
-    animation: App-logo-spin infinite 20s linear;
+
+@media (max-width: 768px) {
+  .User-upload-h2 {
+    display: flex; /* Stacks items vertically on smaller screens */
+    align-items: center; /* Center items horizontally and vertically on smaller screens */
+
   }
 }
-.User-link {
+
+.User-upload-btn{
+  background-color: #73a0b4;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.User-upload-btn:hover{
+  background-color: white;
+  color: #73a0b4;
+  border: 1px solid;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.User-upload-btn-area{
+  display: flex;
+  align-items: center;
+}
+
+.User-upload-history{
+  border: 1px solid #D9D9D9;
+  border-radius: 20px;
+  display: grid;
+  place-items: center;
+  height: 80%;
+  max-width: 100%;
+  color: #808080;
 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media (max-width: 768px) {
+  .User-upload-history{
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

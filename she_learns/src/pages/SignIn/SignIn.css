@@ -52,7 +52,17 @@ h2{
     margin: auto;
     margin-top: 40px;
 }
-.si-submit-button:hover{
+
+.si-btn-link{
+    text-decoration: none;
+    color: black;
+}
+
+/* .si-btn-link:hover{
+    text-decoration: none;
+    color: #D69DEF;
+} */
+.si-submit-button:hover, .si-btn-link:hover{
     background-color: black;
     color: #D69DEF;
 }
