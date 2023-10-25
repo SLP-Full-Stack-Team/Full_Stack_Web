@@ -17,9 +17,9 @@ app.post("/uploads" , async(req,res) => {
         //get data from client side
         
         console.log(req.body);
-        const { upload_title, upload_description } = req.body;
+        const { upload_title, upload_description, upload_time } = req.body;
         const newUpload = await pool.query( 
-            "INSERT INTO uploads (upload_title, upload_description) VALUES($1, $2) RETURNING *", 
+            "INSERT INTO uploads (upload_title, upload_description, upload_time) VALUES($1, $2, NOW()) RETURNING *", 
             [upload_title, upload_description]
         );
 
@@ -34,7 +34,7 @@ app.post("/uploads" , async(req,res) => {
 // GET ALL UPLOADS
 app.get("/uploads", async(req, res) => {
     try{
-        const allUploads = await pool.query("SELECT * FROM uploads");
+        const allUploads = await pool.query("SELECT * FROM uploads ORDER BY upload_id DESC");
         res.json(allUploads.rows);
     }catch(err){
         console.error(err.message);
@@ -60,9 +60,9 @@ app.get("/uploads/:id", async (req,res) => {
 app.put("/uploads/:id", async(req,res) => {
     try {
         const  {id} = req.params;
-        const { upload_title, upload_description} = req.body;
+        const { upload_title, upload_description, upload_time} = req.body;
         const updateUpload = await pool.query(
-            "UPDATE uploads SET (upload_title, upload_description) = ($1, $2) WHERE upload_id = $3", 
+            "UPDATE uploads SET (upload_title, upload_description, upload_time) = ($1, $2, NOW()) WHERE upload_id = $3", 
             [upload_title, upload_description, id]
         );
         res.json("Upload was updated.")

@@ -6,3 +6,6 @@ CREATE TABLE uploads(
     upload_description VARCHAR(255)
 );
 
+ALTER TABLE uploads 
+    ADD upload_time TIMESTAMP DEFAULT NOW();
+
