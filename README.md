@@ -1,7 +1,7 @@
 # sheLearns (Full Stack Developement - Web)
 __Team Lead__: Min Jung
 
-__Team Members__: Christy Xiong, Chia Yuan Wu, Tam Dinh, Payton Beitler
+__Team Members__: Christy Xiong, Chia Yuan Wu, Tam Dinh
 
 __Project Description__: 
 
