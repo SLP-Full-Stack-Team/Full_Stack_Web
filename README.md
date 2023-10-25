@@ -5,7 +5,7 @@ __Team Members__: Christy Xiong, Chia Yuan Wu, Tam Dinh, Payton Beitler
 
 __Project Description__: 
 
-__Tech Stack__: ReactJS, JavaScript, HTML, CSS
+__Tech Stack__: PERN ( Postgresql, Express, ResctJs, Node.js), HTML, CSS, JavaScript
 
 __Demo__:
 
