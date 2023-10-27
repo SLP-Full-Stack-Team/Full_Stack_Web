@@ -1,21 +1,26 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Main from './pages/Main/Main'
+import Main from './pages/Main';
 import SignIn from './pages/SignIn/SignIn';
-import SignUp from './pages/CreateUser/CreateUser'
-import User from './pages/User/User'
-import Upload from './pages/Upload/Upload'
+import SignUp from './pages/CreateUser/CreateUser';
+import User from './pages/User/User';
+
 
 
 function App() {
   return (
     <Router>
-        <nav>
-            <Link to='/main' className='nav-link-main'><img src= 'sheCodes_logo.png' className='nav-logo'></img>sheLearns</Link>
-            <Link to='/signin' className='nav-link-signin'>Sign In</Link>
-            <Link to='/signup' className='nav-link-signup'>Sign Up</Link>
-            <Link to='/user' className='nav-link-user'>User</Link>
-            <Link to='/upload' className='nav-link-upload'>Upload</Link>
+        <nav className='nav-container'>
+            <div className='nav-left'>
+              <Link to='/main' className='nav-link-main'><img src= 'shecodes-logo.png' className='nav-logo'></img>sheLearns</Link>
+            </div>
+            <div className='nav-right'>
+              <Link to='/user' className='btn'>User</Link>
+              <Link to='/signin' className='btn btn-light'>Sign In</Link>
+            </div>
+            
+            {/* <Link to='/signup' className='nav-link-signup'>Sign Up</Link>
+            */}
         </nav>
 
         <Routes>
@@ -23,7 +28,6 @@ function App() {
             <Route path='/signin' element={<SignIn />} />
             <Route path='/signup' element={<SignUp />} />
             <Route path='/user' element={<User />} />
-            <Route path='/upload' element={<Upload />} />
         </Routes>
     </Router>
   );
