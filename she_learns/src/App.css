@@ -46,8 +46,6 @@ body{
   /* height:100vh; */
   display: grid;
   justify-content: center;
-  
- 
 }
 
 
@@ -66,9 +64,6 @@ body{
   width: max-content;
   background-color: #E7D5EF;
 }
-
-
-
 
 .bi-person-circle {
   font-size: 30px;

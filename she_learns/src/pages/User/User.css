@@ -12,13 +12,18 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
+
 }
 
-.User-picture{
+#user-icon{
+  font-size: 50px;
+}
+
+/* .User-picture{
   width: 100px;
   margin: 20px 20px 20px 0px;
-}
+} */
 
 .User-bio{
   text-align: left;
@@ -26,6 +31,7 @@
   flex-direction: column;
   justify-content: center;
   list-style: none;
+  margin-bottom: 0;
 }
 
 .User-name{

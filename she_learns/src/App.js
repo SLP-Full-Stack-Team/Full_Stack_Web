@@ -16,7 +16,7 @@ function App() {
               <Link to='/main' className='nav-link-main'><img src= 'shecodes-logo.png' className='nav-logo'></img>sheLearns</Link>
             </div>
             <div className='nav-right'>
-              <Link to='/user' className='btn'>User</Link>
+              <Link to='/user' className='btn'><i className="bi bi-person-circle"></i></Link>
               <Link to='/signin' className='btn btn-light'>Sign In</Link>
             </div>
             
