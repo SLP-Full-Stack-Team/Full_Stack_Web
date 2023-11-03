@@ -3,14 +3,15 @@ import React, { Fragment , useState } from 'react';
 const EditUpload = ({upload}) => {
     const [upload_title, setTitle] = useState(upload.upload_title)
     const [upload_description, setDescription] = useState(upload.upload_description);
-     
+    const [upload_video_link, setVideoLink] = useState(upload.upload_video_link);
+
     //edit description function
     const updateDescription = async() => {
         try{
-            const body = { upload_title, upload_description };
+            const body = { upload_title, upload_description, upload_video_link};
             const response = await fetch(`http://localhost:5001/uploads/${upload.upload_id}`, {
                 method: "PUT",
-                headers: {"COntent-Type": "application/json"},
+                headers: {"Content-Type": "application/json"},
                 body: JSON.stringify(body)
             });
             // this makes it show the change in the website
@@ -36,7 +37,7 @@ const EditUpload = ({upload}) => {
                     <div className="modal-content">
                         <div className="modal-header">
                             <h5 className="modal-title" id="exampleModalLabel">Edit Solution Upload</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div className="modal-body">
                             <form>
@@ -50,9 +51,14 @@ const EditUpload = ({upload}) => {
                                     <textarea className="form-control" value={upload_description}
                                         onChange={e => setDescription(e.target.value)}></textarea>
                                 </div>
+                                <div className="form-group">
+                                            <label className="col-form-label">Video Link:*</label>
+                                            <input type="text" className="form-control" value={upload_video_link}
+                                                onChange={e => setVideoLink(e.target.value)}/>
+                                </div>
+
                                 <div className="upload-media">
                                     <button className="btn btn-dark">Img</button>
-                                    <button className="btn btn-dark">Video</button>
                                     <button className="btn btn-dark">Text/Doc</button>
                                 </div>
                             </form>   
