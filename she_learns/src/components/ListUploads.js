@@ -1,9 +1,10 @@
 import React , {Fragment, useEffect, useState} from "react";
 import EditUpload from "./EditUpload";
+import ReactPlayer from 'react-player';
 
 const ListUploads = () => {
     const [uploads, setUploads] = useState([]);
-
+    const [videoLink, setVideoLink] = useState(null);
     // delete upload function
     const deleteUpload = async id => {
         try{
@@ -37,10 +38,12 @@ const ListUploads = () => {
         <Fragment>
             {" "}
             <table className="table mt-5 text-center">
-                <thead>
+                <thead> 
                     <tr>
+                        <th scope="col">Posted</th>
                         <th scope="col">Title</th>
                         <th scope="col">Description</th>
+                        <th scope="col">Video Link</th>
                         <th scope="col">Edit</th>
                         <th scope="col">Delete</th>
                     </tr>
@@ -48,8 +51,19 @@ const ListUploads = () => {
                 <tbody>
                     {uploads.map(upload => (
                         <tr key={upload.upload_id}>
+                            <td>{upload.upload_time}</td>
                             <td>{upload.upload_title}</td>
                             <td>{upload.upload_description}</td>
+                            <td>{upload.upload_video_link && (
+                                // Show preview of the video
+                                <ReactPlayer url={upload.upload_video_link}/>
+                                // Show hyperlink of the video link
+                                // <a href={upload.upload_video_link} target="_blank" rel="noopener noreferrer">
+                                //     {upload.upload_video_link}
+                                // </a>
+                                )}
+                            </td>
+                            {/* <td>{upload.upload_video_link}</td> */}
                             <td><EditUpload upload = {upload} /></td>
                             <td><button className="btn btn-danger" onClick={() => deleteUpload(upload.upload_id)}>Delete</button></td>
                         </tr>
