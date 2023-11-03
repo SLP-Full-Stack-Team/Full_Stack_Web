@@ -9,3 +9,7 @@ CREATE TABLE uploads(
 ALTER TABLE uploads 
     ADD upload_time TIMESTAMP DEFAULT NOW();
 
+-- ALTER TABLE uploads 
+--     ADD upload_img BYTEA;
+
+

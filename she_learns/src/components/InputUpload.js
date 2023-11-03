@@ -49,6 +49,7 @@ const InputUpload = () => {
                                         onChange={e => setDescription(e.target.value)}></textarea>
                                 </div>
                                 <div className="upload-media">
+                                    {/* <input className="upload-input" type="file" /> */}
                                     <button className="btn btn-dark">Img</button>
                                     <button className="btn btn-dark">Video</button>
                                     <button className="btn btn-dark">Text/Doc</button>
