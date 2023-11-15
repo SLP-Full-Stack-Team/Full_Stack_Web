@@ -19,6 +19,6 @@ app.use(express.json()); //req body
 
 // DELETE USER
 
-app.listen(5001, () => {
-    console.log("server has started on port 5001");
+app.listen(5002, () => {
+    console.log("server has started on port 5002");
 });
