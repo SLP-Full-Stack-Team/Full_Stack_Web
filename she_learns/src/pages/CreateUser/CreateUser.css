@@ -36,10 +36,21 @@
   .cu-input-box{
     border-radius: 20px;
     border: none;
-    background: #D9D9D9;
+    background:  #D9D9D9;
     height: 35px;
     text-indent: 10px;
     margin-top: 5px;
+  }
+
+  .cu-show-pswd {
+    font-weight: 500;
+    font-size: 14px;
+    display: flex;
+    /* margin-top: 10px; */
+    text-align: left;
+  }
+  .cu-checkbox-txt{
+    margin: 5px;
   }
   
   .cu-submit-button{
