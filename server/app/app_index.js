@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const pool = require("../db");
-const multer = require("multer");
+// const multer = require("multer");
 
 // MIDDLEWARE
 app.use(cors());
