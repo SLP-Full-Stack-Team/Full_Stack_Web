@@ -20,10 +20,12 @@ const CreateUser = () => {
         body: JSON.stringify(body)
       });
       window.location = "/Main";
+
     }catch(err){
       console.error(err.message);
     }
   };
+
 
   const onClickCheckBox = async e => {
     e.preventDefault();

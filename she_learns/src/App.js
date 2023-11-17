@@ -20,8 +20,8 @@ function App() {
               <Link to='/signin' className='btn btn-light'>Sign In</Link>
             </div>
             
-            {/* <Link to='/signup' className='nav-link-signup'>Sign Up</Link>
-            */}
+            {<Link to='/signup' className='nav-link-signup'>Sign Up</Link>
+            }
         </nav>
 
         <Routes>
