@@ -87,5 +87,5 @@ app.delete("/uploads/:id" ,async (req,res) => {
 })
 
 app.listen(5001, () => {
-    console.log("app server has started on port 5001");
+    console.log("App server has started on port 5001");
 });

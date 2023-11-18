@@ -9,8 +9,11 @@ const CreateUser = () => {
   const [user_email, setEmail] = useState("");
   const [user_pswd, setPswd] = useState("");
   const [show_pswd, setShowPswd] = useState(false);
+  const [errorNameMessage, setErrorNameMessage] = useState("");
+  const [errorEmailMessage, setErrorEmailMessage] = useState("");
 
-  const onSubmitUserForm = async e => {
+
+   const onSubmitUserForm = async e => {
     e.preventDefault();
     try{
       const body = {user_firstName, user_lastName, user_name, user_email, user_pswd};
@@ -19,11 +22,20 @@ const CreateUser = () => {
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify(body)
       });
-      window.location = "/Main";
+      const data = await response.json();
+      if(response.ok){
+        window.location = "/Main";
+      }else{
+        setErrorNameMessage(data.errorNameMessage || "!! Username already exits !!");
+        setErrorEmailMessage(data.errorEmailMessage || "!! Email already exits !!");
+      }
+
+
     }catch(err){
       console.error(err.message);
     }
   };
+
 
   const onClickCheckBox = async e => {
     e.preventDefault();
@@ -38,7 +50,7 @@ const CreateUser = () => {
   return (
     <Fragment>
       <div className="CreateUser">
-        <body className="CreateUser-body">
+        <div className="CreateUser-body">
           <h2>Create an Account</h2>
 
             <form className="cu-form-input">
@@ -57,12 +69,14 @@ const CreateUser = () => {
               <label>Username</label>
               <input className="cu-input-box" type="text"
                      value={user_name} onChange={e => setName(e.target.value)} required/>
+                     {errorNameMessage && <p className="error-message">{errorNameMessage}</p>}
             </form>
 
             <form className="cu-form-input">
               <label>Email</label>
               <input className="cu-input-box" type="text"
                      value={user_email} onChange={e => setEmail(e.target.value)} required/>
+                     {errorEmailMessage && <p className="error-message">{errorEmailMessage}</p>}
             </form>
 
             <form className="cu-form-input">
@@ -76,7 +90,7 @@ const CreateUser = () => {
             </form>
               
             <Link to='/main' className='btn cu-submit-button' onClick={e => onSubmitUserForm(e)}>Create Account</Link>
-        </body>   
+        </div>   
       </div> 
     </Fragment>
   );

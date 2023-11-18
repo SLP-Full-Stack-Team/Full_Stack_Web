@@ -18,6 +18,9 @@ users.post("/users" , async(req,res) => {
         //get data from client side
         console.log(req.body);
         const { user_firstName, user_lastName, user_name, user_email, user_pswd } = req.body;
+        
+      
+        // Create new user
         const newUser = await pool.query( 
             "INSERT INTO users (user_firstName, user_lastName, user_name, user_email, user_pswd) VALUES($1, $2, $3, $4, $5) RETURNING *", 
             [user_firstName, user_lastName, user_name, user_email, user_pswd]
@@ -31,12 +34,45 @@ users.post("/users" , async(req,res) => {
 
 }); 
 
-// GET A UPLOAD
-// this is will be used to show case user info on User page
+// GET ALL UPLOADS
+users.get("/userss", async(req, res) => {
+    try{
+        const allUsers = await pool.query("SELECT * FROM userss ORDER BY user_id DESC");
+        res.json(allUsers.rows);
+    }catch(err){
+        console.error(err.message);
+    }
+});
 
+// GET A USER
+users.get("/users/:id", async (req,res) => {
+    try{
+        console.log(req.params);
+        const {id} = req.params;
+        const users = await pool.query(
+            "SELECT * FROM users WHERE user_id = $1", 
+            [id]
+        );
+        res.json(users.rows[0]);
+    }catch(err){
+        console.error(err.message);
+    }
+})
 
-// DELETE USER
+// LOGIN A USER
+users.post('/users/:user_name', async (req, res) => {
+    try {
+      const { user_name, user_pswd } = req.body;
+      const loginUser = await pool.query(
+        'SELECT * FROM users WHERE user_name = $1 AND user_pswd = $2',
+        [user_name, user_pswd]
+      );
+      res.json(loginUser.rows[0]);
+    } catch (err) {
+      console.error(err.message);
+    }
+});
 
 users.listen(5002, () => {
-    console.log("users server has started on port 5002");
+    console.log("Users server has started on port 5002");
 });
