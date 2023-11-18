@@ -29,8 +29,6 @@ const CreateUser = () => {
         setErrorNameMessage(data.errorNameMessage || "!! Username already exits !!");
         setErrorEmailMessage(data.errorEmailMessage || "!! Email already exits !!");
       }
-
-
     }catch(err){
       console.error(err.message);
     }
