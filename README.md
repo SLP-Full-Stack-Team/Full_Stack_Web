@@ -7,7 +7,7 @@ __Project Description__: Web application that allows sheCodes members view and u
 
 __Tech Stack__: PERN ( Postgresql, Express, ResctJs, Node.js), HTML, CSS, JavaScript
 
-__Resources__ : Postman, DBeaver, Git, StackOverflow, Youtube, CPT
+__Resources__ : Postman, DBeaver, Git, StackOverflow, Youtube, ChatGPT
 
 __Demo__:
 
