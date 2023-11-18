@@ -1,12 +1,11 @@
 import './User.css';
-import userPic from './images/profile-user.png'
 import { Link } from 'react-router-dom';
 
 function User() {
   return (
     <div className="User-container">
       <div className = "User-info">
-        <img className="User-picture" src={userPic} alt = "user profile picture"  />
+        <i className="bi bi-person-circle" id = "user-icon"></i>
         <ul className = "User-bio">
           <li className = "User-name" >Jane Cooper</li>
           <li className = "User-detail">User Name: jane123</li>

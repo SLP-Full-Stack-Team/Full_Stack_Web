@@ -84,4 +84,9 @@ h2{
     font-weight: bolder;
 }
 
+/* Error Message */
+.error-message{
+    color: red;
+    font-weight: 500;
+}
   

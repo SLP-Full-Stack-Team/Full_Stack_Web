@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const pool = require("../db");
+// const multer = require("multer");
 
 // MIDDLEWARE
 app.use(cors());
@@ -17,10 +18,10 @@ app.post("/uploads" , async(req,res) => {
         //get data from client side
         
         console.log(req.body);
-        const { upload_title, upload_description, upload_time } = req.body;
+        const { upload_title, upload_description, upload_video_link, upload_time} = req.body;
         const newUpload = await pool.query( 
-            "INSERT INTO uploads (upload_title, upload_description, upload_time) VALUES($1, $2, NOW()) RETURNING *", 
-            [upload_title, upload_description]
+            "INSERT INTO uploads (upload_title, upload_description, upload_video_link, upload_time) VALUES($1, $2, $3, NOW()) RETURNING *", 
+            [upload_title, upload_description, upload_video_link]
         );
 
         res.json(newUpload);
@@ -60,10 +61,10 @@ app.get("/uploads/:id", async (req,res) => {
 app.put("/uploads/:id", async(req,res) => {
     try {
         const  {id} = req.params;
-        const { upload_title, upload_description, upload_time} = req.body;
+        const { upload_title, upload_description, upload_video_link, upload_time} = req.body;
         const updateUpload = await pool.query(
-            "UPDATE uploads SET (upload_title, upload_description, upload_time) = ($1, $2, NOW()) WHERE upload_id = $3", 
-            [upload_title, upload_description, id]
+            "UPDATE uploads SET (upload_title, upload_description, upload_video_link, upload_time) = ($1, $2, $3, NOW()) WHERE upload_id = $4", 
+            [upload_title, upload_description, upload_video_link, id]
         );
         res.json("Upload was updated.")
     }catch(err){
@@ -86,5 +87,5 @@ app.delete("/uploads/:id" ,async (req,res) => {
 })
 
 app.listen(5001, () => {
-    console.log("server has started on port 5001");
+    console.log("App server has started on port 5001");
 });

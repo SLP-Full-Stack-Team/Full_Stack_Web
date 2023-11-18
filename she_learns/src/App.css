@@ -46,18 +46,39 @@ body{
   /* height:100vh; */
   display: grid;
   justify-content: center;
- 
 }
 
 /* input upload */
+.upload-container-parent{
+  display: flex;
+  justify-content: center;
+}
+
+.upload-container {
+  display: flex;
+  flex-wrap: wrap;
+  /* border: 1px solid; */
+  border-radius: 10px;
+  padding: 10px 40px;
+  width: max-content;
+  background-color: #E7D5EF;
+}
+
+.bi-person-circle {
+  font-size: 30px;
+  margin: 20px 5px;
+}
+
 .upload-btn{
   font-size: 1.4rem;
-  border: 1px solid;
+  border: 1px solid grey;
   border-radius: 35px;
-  /* flex-grow: 1; */
+  margin: 20px 5px;
   padding-left: 1.6rem;
+  padding-top:0.2rem;
   width: 500px;
-  justify-content: left;
+  text-align: left;
+  /* justify-items: center; */
   display: flex;
 }
 

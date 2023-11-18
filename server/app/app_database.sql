@@ -9,7 +9,5 @@ CREATE TABLE uploads(
 ALTER TABLE uploads 
     ADD upload_time TIMESTAMP DEFAULT NOW();
 
--- ALTER TABLE uploads 
---     ADD upload_img BYTEA;
-
-
+ALTER TABLE uploads 
+    ADD upload_video_link TEXT;
