@@ -7,7 +7,7 @@ __Project Description__:
 
 __Tech Stack__: PERN ( Postgresql, Express, ResctJs, Node.js), HTML, CSS, JavaScript
 
-__Demo__:
+__Demo__: https://www.youtube.com/watch?v=mmEV291iwyE
 
 __Wireframe__: The user interface wireframe design was developed by using __Figma__. Each member was assigned a website page to create, while maintaining the overall theme.
 
