@@ -7,9 +7,9 @@ function SignIn() {
   const [user_pswd, setPswd] = useState("");
   const [ErrorMessage, setErrorMessage] = useState("");
 
-  const onSubmitLoginForm = async e =>
+
+  const onSubmitLoginForm = async (user_name, user_pswd) =>
   {
-    e.preventDefault();
     try{
       const body = {user_name, user_pswd};
       const response = await fetch ("http://localhost:5002/users/:user_name", {
@@ -22,10 +22,8 @@ function SignIn() {
         console.log("LOGIN SUCCESS");
         window.location = "/Main";
       }else{
-        setErrorMessage(data.error || "An error occurred during user creation.");
+        setErrorMessage(data.ErrorMessage || "login_failed");
       }
-
-
     }catch(err){
       console.error(err.message);
     }
@@ -41,7 +39,7 @@ function SignIn() {
             className="si-input-box" 
             type="text"
             value={user_name} onChange={e => setName(e.target.value)} required/>
-                     {ErrorMessage && <p className="error-message">{ErrorMessage}</p>}
+            {ErrorMessage && <p className="error-message">{ErrorMessage}</p>}
         </form>
         <form className="si-form-input">
           <label>Password</label>
