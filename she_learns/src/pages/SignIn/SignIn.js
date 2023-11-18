@@ -52,13 +52,6 @@ function SignIn() {
             value={user_name} onChange={e => setName(e.target.value)} required/>
             {ErrorMessage && <p className="error-message">{ErrorMessage}</p>}
         </form>
-        {/* <form className="si-form-input">
-          <label>Password</label>
-          <input 
-            className="si-input-box" 
-            type="text"
-            value={user_pswd} onChange={e => setPswd(e.target.value)} required></input>
-        </form> */}
 
         <form className="cu-form-input">
           <label>Password</label>
