@@ -7,9 +7,9 @@ function User() {
       <div className = "User-info">
         <i className="bi bi-person-circle" id = "user-icon"></i>
         <ul className = "User-bio">
-          <li className = "User-name" >Jane Cooper</li>
-          <li className = "User-detail">User Name: jane123</li>
-          <li className = "User-detail">Email: jane123@gmail.com</li>
+          <li className = "User-name" >sheCodes</li>
+          <li className = "User-detail">User Name: slp2023</li>
+          <li className = "User-detail">Email: cppshecodes@gmail.com</li>
         </ul>
       </div>
       <div className = "User-upload-area">

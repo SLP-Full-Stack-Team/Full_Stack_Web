@@ -46,7 +46,7 @@ const ListUploads = () => {
                             <div className="user-info">
                                 <i className="bi bi-person-circle" id = "user-icon"></i>
                                 <ul className = "user-entry">
-                                    <li id="name">Jane Cooper</li>
+                                    <li id="name">sheCodes</li>
                                     <li>Posted {new Intl.DateTimeFormat('en-US', { month: '2-digit', day: '2-digit', year: 'numeric' }).format(new Date(upload.upload_time))}</li>
                                 </ul>
                             </div>
