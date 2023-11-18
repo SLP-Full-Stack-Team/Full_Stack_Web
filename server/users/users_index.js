@@ -19,7 +19,12 @@ users.post("/users" , async(req,res) => {
         console.log(req.body);
         const { user_firstName, user_lastName, user_name, user_email, user_pswd } = req.body;
         
-      
+        const duplicateUserEmail = await pool.query("SELECT user_id FROM users WHERE user_email = $1", [user_email]);
+        if(duplicateUserEmail.rows.length > 0)
+        {
+            return res.status(400).json({ error: "Duplicate Email. Choose a different one." });
+        }; 
+       
         // Create new user
         const newUser = await pool.query( 
             "INSERT INTO users (user_firstName, user_lastName, user_name, user_email, user_pswd) VALUES($1, $2, $3, $4, $5) RETURNING *", 
