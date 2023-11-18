@@ -3,9 +3,11 @@ __Team Lead__: Min Jung
 
 __Team Members__: Christy Xiong, Chia Yuan Wu, Tam Dinh
 
-__Project Description__: 
+__Project Description__: Web application that allows sheCodes members view and upload their own coding practice videos.
 
 __Tech Stack__: PERN ( Postgresql, Express, ResctJs, Node.js), HTML, CSS, JavaScript
+
+__Resources__ : Postman, DBeaver, Git, StackOverflow, Youtube, CPT
 
 __Demo__:
 
