@@ -9,6 +9,3 @@ ALTER TABLE uploads
 
 ALTER TABLE uploads 
     ADD upload_video_link TEXT;
-
-
-

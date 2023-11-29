@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const pool = require("../db");
-const multer = require("multer");
+// const multer = require("multer");
 
 // MIDDLEWARE
 app.use(cors());
@@ -87,5 +87,5 @@ app.delete("/uploads/:id" ,async (req,res) => {
 })
 
 app.listen(5001, () => {
-    console.log("server has started on port 5001");
+    console.log("App server has started on port 5001");
 });
